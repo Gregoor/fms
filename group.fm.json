@@ -1,0 +1,84 @@
+[
+    {
+        "id": "ho3wc",
+        "type": "Group",
+        "category": null,
+        "alias": "Vorspeise",
+        "block": [
+            {
+                "id": "n6zcu",
+                "type": "Group",
+                "category": null,
+                "alias": "G1",
+                "block": [
+                    {
+                        "id": "e0p7s",
+                        "type": "Question",
+                        "alias": "Frage 1",
+                        "text": "Frage 1",
+                        "info": null,
+                        "answer": {
+                            "type": "ChoiceAnswer",
+                            "options": [
+                                {
+                                    "id": "id-ja",
+                                    "alias": "Ja",
+                                    "text": "Ja"
+                                },
+                                {
+                                    "id": "vlzkz",
+                                    "alias": "Nein",
+                                    "text": "Nein"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "cu4ug",
+                "type": "If",
+                "cases": [
+                    {
+                        "id": "i9rpll",
+                        "type": "IfCase",
+                        "test": {
+                            "id": "zfczw",
+                            "questionRef": {
+                                "type": "AliasRef",
+                                "value": "Frage 1"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                                "id-ja"
+                            ]
+                        },
+                        "block": [
+                            {
+                                "id": "0dx6b",
+                                "type": "Group",
+                                "category": null,
+                                "alias": "G2",
+                                "block": [
+                                    {
+                                        "id": "cnqdz",
+                                        "type": "Question",
+                                        "alias": "Frage 2",
+                                        "text": "Frage 2",
+                                        "info": null,
+                                        "answer": {
+                                            "type": "TextAnswer"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "alternate": []
+            }
+        ]
+    }
+]
